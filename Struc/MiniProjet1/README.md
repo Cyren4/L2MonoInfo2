@@ -1,9 +1,9 @@
 # __MiniProjet 1__
 
 
-## Exercice 1 
+## __Exercice 1__ 
 
-## __Partie 1__ : 
+### __Partie 1__ : 
 
 ### Question 1
 
@@ -37,7 +37,7 @@ if (i == 0)
 	break;
 ```
 
-## __Partie 2__ : 
+### __Partie 2__ : 
 
 ### Question 4
 
@@ -51,14 +51,15 @@ if (i == 0)
 (gdb) p new->rue
 $1 = 0x0
 ```
-Ce qui correspond a une adresse NULL car lors de l'appel de fonction on ne lui alloue pas de memoire. 
+Ce qui correspond a une adresse NULL car lors de l'appel de fonction ``creer_adresse`` on ne lui alloue pas de memoire. 
 
 - En continuant l'exécution pour arriver au deuxième point d'arrêt remarque que l'erreur apparaît
 - L'erreur provient de la ligne 15 ``strcpy(new->rue, r);`` En effet, la variable ``new->rue`` n'est pas initialise, donc la fonction copie r dans une adress aleatoire.
 	- Pour corriger cette erreur on peut, soit allouer dynamiquement avec l'instruction ``new->rue=strdup(r);`` dans la fonction ``creer_addresse``
 	- Ou on declare un tableau statique ``new->rue`` dans la structure (par exemple : ``char rue[100];``) 
 
-## __Partie 3__ : 
+### __Partie 3__ : 
+
 
 ### Question 6
 
@@ -70,5 +71,5 @@ d'afficher
 ### Question 7
 le problème de ce programme est que l'on alloue une taille au tableau qui est la taille max, mais que l'on utilisera peut-être pas toute la mémoire allouée comme dans notre exemple
 
-## Exercice 2
+## __Exercice__ 2
 
