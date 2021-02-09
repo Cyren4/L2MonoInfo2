@@ -1,0 +1,36 @@
+<table>
+<caption>Table de quelques variables du serveur</caption>
+      <thead>
+            <tr>
+                 <td><b> Noms des variables </b></td> 
+                 <td><b> Valeurs des variables</b></td> 
+           </tr>
+    </thead>
+    <tbody>
+           <tr>
+                 <td> SCRIPT_NAME </td> 
+                 <td> doc.org/$SCRIPT_NAME </td> 
+          </tr>
+
+          <tr>
+                 <td> SERVER_SOFTWARE </td>
+                 <td> doc.org/$SERVER_SOFTWARE </td> 
+          </tr>
+
+          <tr>
+                 <td> SERVER_ADDR </td> 
+                 <td> doc.org/$SERVER_ADDR </td> 
+          </tr>
+
+          <tr>
+                 <td> REMOTE_PORT </td> 
+                 <td> doc.org/$REMOTE_PORT</td> 
+          </tr>
+
+          <tr>
+                 <td> REMOTE_ADDR </td> 
+                 <td> doc.org/$REMOTE_ADDR</td> 
+          </tr>
+    </tbody>
+</table>
+

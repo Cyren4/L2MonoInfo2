@@ -63,13 +63,44 @@ Ce qui correspond a une adresse NULL car lors de l'appel de fonction ``creer_adr
 
 ### Question 6
 
-Le programme est censé faire une structure tableau, d'ajouter des éléments à cette structure, et à les afficher. Lorsque l'on lance le programme, on a :
-``t->position = 5 ``
-[ 5 18 99999 -452 4587 ] 
-d'afficher
+- Le programme est censé faire une structure tableau, d'ajouter des éléments à cette structure, et à les afficher.
+- Lorsque l'on lance le programme, on obtient :
+```
+t->position = 5 
+[ 5 18 99999 -452 4587 ]
+```
 
 ### Question 7
-le problème de ce programme est que l'on alloue une taille au tableau qui est la taille max, mais que l'on utilisera peut-être pas toute la mémoire allouée comme dans notre exemple
+
+- Le problème de ce programme est que l'on alloue de la memoire pour la structure ``Tableau`` et aussi pour le tableau d'int ``tab`` qu'il contient auquel on a alloue ``sizeof(int)*maxTaille``
+- Or que l'on ne libere pas toute la mémoire :
+	- on libere uniquement la mémoire de la stucture ``Tableau`` 
+	- on ne libere pas la memoire de ``t->tab``
+
+
+### Question 8
+
+- On constate que Valgrind repere des leak dans notre programme.
+- Les 400bytes relevés correspondent a ``sizeof(int)*maxTaille`` que l'on a alloue pour ``t->tab`` mais que l'on a pas free.
+
+
+### Question 9
+
+Les corrections possibles sont : 
+- Avoir un tableau static dans la structure ``Tableau`` (mais on ne pourra pas rentrer sa taille max au moment de l'initialisation du tableau)
+- Liberer la memoire du tableau d'int avant de liberer celle de la structure en ajoutant la ligne :
+```C
+free(t->tab);
+``` 
 
 ## __Exercice__ 2
 
+### __Partie 1__ : 
+
+
+### Question 1
+
+1. La version qui retourne un tableau alloué est plus intuitive et cela nous permet d'economiser des lignes.
+	- Dans la version avec un passage de reference on est obligé de creer un tableau d'int avant.
+
+2. 

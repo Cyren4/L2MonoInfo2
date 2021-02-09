@@ -1,0 +1,25 @@
+<code>
+#!/bin/bash
+
+cat $SCRIPT_NAME
+<code>
+
+Je n’ai pas tres bien compris la syntaxe du cat << EOF (ou il faut l’inserer dans le script)
+
+<code>
+Content-Type:  text/html; charset=utf-8
+<html>
+<head>
+<title>$SERVER_SOFTWARE </title>
+</head>
+
+<body>
+
+<div>
+je suis <a href="doc.org/$SCRIPT_NAME">$SCRIPT_NAME</a> servi par <a href="doc.org/$SERVER_SOFTWARE">$SERVER_SOFTWARE</a> pour <a href="doc.org/$HTTP_USER_AGENT">Home page</a>
+</div>
+
+</body>
+</html>
+
+</code>

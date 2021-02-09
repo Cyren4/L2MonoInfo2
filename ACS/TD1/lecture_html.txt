@@ -1,0 +1,15 @@
+1. La première ligne du fichier HTML annexe dit au navigateur de quel type d’HTML il s’agit (DOCTYPE signifie DOCument TYPE). Nous avons notamment la 1.1 .
+
+2. Les balises :
+- head : correspond l’entête du site (la place pour des informations variées qui ne sont pas affichées à l’écran.)
+- body : correspond au corps du site qui sera affiché
+
+3. Les balises :
+- ul : liste imbriqué
+- li : représente l’ordre des éléments d’une liste
+
+4. Les éléments : <style> <h1><a> <p> permettent de préciser la présentation graphique du texte 
+
+5. 1ere balise meta : encodage du site
+
+6. & : permet d’introduire des caractères par leur nom/code
